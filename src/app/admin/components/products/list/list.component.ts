@@ -36,7 +36,7 @@ export class ListComponent extends BaseComponent implements OnInit {
 
   //delete(id, event) {
   //  const img: HTMLImageElement = event.srcElement;
-  //  $(img.parentElement.parentElement).fadeOut(1500)
+  //  $(img.parentElement.parentElement).fadeOut(1500);
   //}
 
   async pageChanged() {
