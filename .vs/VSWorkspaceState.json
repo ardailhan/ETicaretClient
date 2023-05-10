@@ -3,8 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\entities"
+    "\\src\\app\\contracts",
+    "\\src\\app\\contracts\\users",
+    "\\src\\app\\services",
+    "\\src\\app\\services\\common",
+    "\\src\\app\\ui",
+    "\\src\\app\\ui\\components",
+    "\\src\\app\\ui\\components\\register"
   ],
-  "SelectedNode": "\\src\\app\\entities\\user.ts",
+  "SelectedNode": "\\src\\app\\contracts\\users\\create_user.ts",
   "PreviewInSolutionExplorer": false
 }
