@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { Create_User } from '../../../contracts/users/create_user';
 import { User } from '../../../entities/user';
+import { UserService } from '../../../services/common/models/user.service';
+import { CustomToastrService, ToastrMessageType, ToastrPosition } from '../../../services/ui/custom-toastr.service';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +11,7 @@ import { User } from '../../../entities/user';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private userService: UserService, private toastrService: CustomToastrService) { }
 
 
   frm: FormGroup;
@@ -32,7 +35,7 @@ export class RegisterComponent implements OnInit {
           Validators.required
         ]]
     }, {
-      validators: (group: AbstractControl): ValidationErrors | null=> {
+      validators: (group: AbstractControl): ValidationErrors | null => {
         let password = group.get("password").value;
         let passwordConfirm = group.get("passwordConfirm").value;
         return password === passwordConfirm ? null : { notSame: true };
@@ -44,11 +47,23 @@ export class RegisterComponent implements OnInit {
     return this.frm.controls;
   }
 
-  submitted: boolean;
-  onSubmit(data: User) {
+  submitted: boolean = false;
+  async onSubmit(user: User) {
     this.submitted = true;
 
     if (this.frm.invalid)
       return;
+
+    const result: Create_User = await this.userService.create(user);
+    if (result.succeeded)
+      this.toastrService.message(result.message, "User successfully registered!", {
+        messageType: ToastrMessageType.Success,
+        position: ToastrPosition.TopRight
+      })
+    else
+      this.toastrService.message(result.message, "Registration failed !", {
+        messageType: ToastrMessageType.Error,
+        position: ToastrPosition.TopRight
+      })
   }
 }
