@@ -15,7 +15,6 @@ export class LoginComponent extends BaseComponent implements OnInit {
   }
 
     ngOnInit(): void {
-        throw new Error('Method not implemented.');
     }
 
   async login(usernameOrEmail: string, password: string) {
