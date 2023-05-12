@@ -3,8 +3,10 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\contracts",
-    "\\src\\app\\contracts\\token"
+    "\\src\\app\\ui",
+    "\\src\\app\\ui\\components",
+    "\\src\\app\\ui\\components\\login"
   ],
+  "SelectedNode": "\\src\\app\\ui\\components\\login\\login.component.html",
   "PreviewInSolutionExplorer": false
 }
