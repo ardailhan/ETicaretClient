@@ -20,7 +20,7 @@ export class DashboardComponent extends BaseComponent {
   }
 
   ngOnInit(): void {
-    this.signalRService.on(ReceiveFunctions.ProductAddedMessageReceiveFunction, message => {
+    this.signalRService.on(HubUrls.ProductHub, ReceiveFunctions.ProductAddedMessageReceiveFunction, message => {
       this.alertify.message(message, {
         messageType: MessageType.Notify,
         position: Position.TopRight
