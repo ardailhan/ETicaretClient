@@ -11,9 +11,9 @@ import { HttpClientService } from '../http-client.service';
 export class BasketService {
   constructor(private httpClientService: HttpClientService) { }
 
-  async get() : Promise<List_Basket_Item[]> {
+  async get(): Promise<List_Basket_Item[]> {
     const observable: Observable<List_Basket_Item[]> = this.httpClientService.get({
-      controller: "baskets"
+      controller: "baskets",
     });
 
     return await firstValueFrom(observable);

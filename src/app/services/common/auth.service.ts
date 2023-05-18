@@ -7,6 +7,8 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 export class AuthService {
 
   constructor(private jwtHelper: JwtHelperService) { }
+
+
   identityCheck() {
     const token: string = localStorage.getItem("accessToken");
 
@@ -26,7 +28,5 @@ export class AuthService {
     return _isAuthenticated;
   }
 }
-
-
 
 export let _isAuthenticated: boolean;
