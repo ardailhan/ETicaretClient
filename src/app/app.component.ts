@@ -18,7 +18,7 @@ export class AppComponent {
     httpClientService.get({
       controller: "baskets"
     }).subscribe(data => {
-      debugger;
+     
     });
 
 

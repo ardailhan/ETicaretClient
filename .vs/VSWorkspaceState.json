@@ -2,8 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\services",
+    "\\src\\app\\services\\common",
+    "\\src\\app\\ui",
+    "\\src\\app\\ui\\components",
+    "\\src\\app\\ui\\components\\products",
+    "\\src\\app\\ui\\components\\products\\list"
   ],
-  "SelectedNode": "\\src\\app\\app.component.ts",
+  "SelectedNode": "\\src\\app\\services\\common\\http-error-handler-interceptor.service.ts",
   "PreviewInSolutionExplorer": false
 }
