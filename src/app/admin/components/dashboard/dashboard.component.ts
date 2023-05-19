@@ -16,8 +16,8 @@ export class DashboardComponent extends BaseComponent {
 
   constructor(private alertify: AlertifyService, spinner : NgxSpinnerService, private signalRService: SignalRService) {
     super(spinner)
-    signalRService.start(HubUrls.ProductHub)
-    signalRService.start(HubUrls.OrderHub)
+    //signalRService.start(HubUrls.ProductHub)
+    //signalRService.start(HubUrls.OrderHub)
   }
 
   ngOnInit(): void {
