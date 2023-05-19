@@ -47,14 +47,12 @@ export class BasketsComponent extends BaseComponent implements OnInit {
 
   removeBasketItem(basketItemId: string) {
     //$("#basketModal").modal("hide");
-
     this.dialogService.openDialog({
       componentType: BasketItemRemoveDialogComponent,
       data: BasketItemDeleteState.Yes,
       afterClosed: async () => {
         this.showSpinner(SpinnerType.BallAtom);
         await this.basketService.remove(basketItemId);
-
         var a = $("." + basketItemId)
         $("." + basketItemId).fadeOut(500, () => this.hideSpinner(SpinnerType.BallAtom));
         //$("#basketModal").modal("show");
@@ -64,7 +62,6 @@ export class BasketsComponent extends BaseComponent implements OnInit {
 
   shoppingComplete() {
     //$("#basketModal").modal("hide");
-
     this.dialogService.openDialog({
       componentType: ShoppingCompleteDialogComponent,
       data: ShoppingCompleteState.Yes,
