@@ -1,5 +1,4 @@
 import { Injectable, ViewContainerRef } from '@angular/core';
-import { BaseComponent } from '../../base/base.component';
 
 @Injectable({
   providedIn: 'root'

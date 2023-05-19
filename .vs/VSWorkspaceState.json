@@ -1,6 +1,17 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\contracts",
+    "\\src\\app\\contracts\\order",
+    "\\src\\app\\services",
+    "\\src\\app\\services\\common",
+    "\\src\\app\\services\\common\\models",
+    "\\src\\app\\ui",
+    "\\src\\app\\ui\\components",
+    "\\src\\app\\ui\\components\\baskets"
   ],
+  "SelectedNode": "\\src\\app\\contracts\\order\\create_order.ts",
   "PreviewInSolutionExplorer": false
 }
