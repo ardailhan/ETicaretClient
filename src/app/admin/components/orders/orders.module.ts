@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { DialogModule } from '../../../dialogs/dialog.module';
-import { FileUploadModule } from '../../../services/common/file-upload/file-upload.module';
+import { DeleteDirectiveModule } from '../../../directives/admin/delete.directive.module';
 
 
 
@@ -22,9 +22,9 @@ import { FileUploadModule } from '../../../services/common/file-upload/file-uplo
   imports: [
     CommonModule,
     RouterModule.forChild([
-      {path: "", component: OrdersComponent}
+      { path: "", component: OrdersComponent }
     ]),
-    MatSidenavModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatTableModule, MatPaginatorModule, DialogModule, FileUploadModule
+    MatSidenavModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatTableModule, MatPaginatorModule, DialogModule, DeleteDirectiveModule
   ]
 })
 export class OrdersModule { }
