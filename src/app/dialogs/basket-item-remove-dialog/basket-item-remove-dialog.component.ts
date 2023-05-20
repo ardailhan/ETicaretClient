@@ -12,15 +12,14 @@ declare var $: any;
 export class BasketItemRemoveDialogComponent extends BaseDialog<BasketItemRemoveDialogComponent> implements OnDestroy {
   constructor(
     dialogRef: MatDialogRef<BasketItemRemoveDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: BasketItemDeleteState,
-  ) {
-    super(dialogRef);
+    @Inject(MAT_DIALOG_DATA) public data: BasketItemDeleteState) {
+    super(dialogRef)
+  }
+    ngOnDestroy(): void {
+      $("#basketModal").modal("show");
+    }
   }
 
-  ngOnDestroy(): void {
-    $("#basketModal").modal("show");
-  }
-}
 
 export enum BasketItemDeleteState {
   Yes,

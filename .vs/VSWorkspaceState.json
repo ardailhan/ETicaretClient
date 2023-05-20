@@ -8,6 +8,6 @@
     "\\src\\app\\admin\\components\\orders",
     "\\src\\app\\admin\\components\\orders\\list"
   ],
-  "SelectedNode": "\\src\\app\\admin\\components\\orders\\list\\list.component.ts",
+  "SelectedNode": "\\src\\app\\admin\\components\\orders\\list\\list.component.html",
   "PreviewInSolutionExplorer": false
 }

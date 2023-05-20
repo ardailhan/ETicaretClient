@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { firstValueFrom, Observable } from 'rxjs';
 import { Create_Order } from '../../../contracts/order/create_order';
 import { List_Order } from '../../../contracts/order/list_order';
+import { SingleOrder } from '../../../contracts/order/single_order';
 import { HttpClientService } from '../http-client.service';
 
 @Injectable({
@@ -29,6 +30,17 @@ export class OrderService {
     promiseData.then(value => successCallBack())
       .catch(error => errorCallBack(error));
 
+    return await promiseData;
+  }
+
+  async getOrderById(id: string, successCallBack?: () => void, errorCallBack?: (errorMessage: string) => void) {
+    const observable: Observable<SingleOrder> = this.httpClientService.get<SingleOrder>({
+      controller: "orders"
+    }, id);
+
+    const promiseData = firstValueFrom(observable);
+    promiseData.then(value => successCallBack())
+      .catch(error => errorCallBack(error))
     return await promiseData;
   }
 }
