@@ -1,13 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\app",
-    "\\src\\app\\ui",
-    "\\src\\app\\ui\\components",
-    "\\src\\app\\ui\\components\\password-reset",
-    "\\src\\app\\ui\\components\\update-password"
+    ""
   ],
-  "SelectedNode": "\\src\\app\\ui\\components\\password-reset\\password-reset.component.html",
   "PreviewInSolutionExplorer": false
 }
