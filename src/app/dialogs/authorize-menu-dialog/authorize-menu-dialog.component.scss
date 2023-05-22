@@ -1,0 +1,8 @@
+:host {
+  display:inline-table;
+  flex-direction: column;
+  align-items: self-start;
+}
+.demo-section + .demo-section {
+  margin-top: 16px;
+}
