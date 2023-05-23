@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\admin",
+    "\\src\\app\\admin\\components",
+    "\\src\\app\\admin\\components\\authorize-menu",
+    "\\src\\app\\dialogs",
+    "\\src\\app\\dialogs\\authorize-menu-dialog",
+    "\\src\\app\\dialogs\\shopping-complete-dialog"
   ],
   "PreviewInSolutionExplorer": false
 }
