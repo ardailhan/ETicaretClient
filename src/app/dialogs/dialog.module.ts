@@ -15,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { CompleteOrderDialogComponent } from './complete-order-dialog/complete-order-dialog.component';
 import { AuthorizeMenuDialogComponent } from './authorize-menu-dialog/authorize-menu-dialog.component';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     CommonModule,
     MatDialogModule, MatButtonModule, MatCardModule, MatTableModule, MatToolbarModule,
     FileUploadModule,
-    FormsModule,MatBadgeModule
+    FormsModule,MatBadgeModule,MatListModule
   ]
 })
 export class DialogModule { }
