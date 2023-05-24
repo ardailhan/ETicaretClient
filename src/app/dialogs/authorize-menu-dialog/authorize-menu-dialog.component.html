@@ -1,18 +1,19 @@
-<h1 mat-dialog-title matBadge="{{rolesComponent.selectedOptions.selected.length}}/{{roles.totalCount}}" style="margin-top:30px;margin-right:30px;" matBadgeOverlap="false">{{data.name}} Role Assignment</h1>
+<h1 mat-dialog-title matBadge="{{rolesComponent.selectedOptions.selected.length}}/{{roles.totalCount}}" matBadgeOverlap="false">Assign role to this endpoint {{data.name}}</h1>
 <div mat-dialog-content>
-  <p>You can assign any role.</p>
+  <p>You can assign roles to related page from below</p>
 </div>
 
+
 <mat-selection-list #rolesComponent>
-  <mat-list-option *ngFor="let role of roles.datas">
+  <mat-list-option *ngFor="let role of listRoles" selected="{{role.selected}}">
     {{role.name}}
   </mat-list-option>
 </mat-selection-list>
 
 
 
-<div> </div>
+<div></div>
 <div mat-dialog-actions>
-  <button mat-button (click)="close()">No</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="assignRoles(rolesComponent)">Assign Roles</button>
+  <button mat-button (click)="close()">Close</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="assignRoles(rolesComponent)">Assign Role</button>
 </div>
