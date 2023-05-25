@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { firstValueFrom, Observable } from 'rxjs';
 import { Create_User } from '../../../contracts/users/create_user';
+import { List_User } from '../../../contracts/users/list_user';
 import { User } from '../../../entities/user';
 import { CustomToastrService, ToastrMessageType, ToastrPosition } from '../../ui/custom-toastr.service';
 import { HttpClientService } from '../http-client.service';
@@ -34,5 +35,18 @@ export class UserService {
     const promiseData: Promise<any> = firstValueFrom(observable);
     promiseData.then(value => successCallBack()).catch(error => errorCallBack(error));
     await promiseData;
+  }
+
+  async getAllUsers(page: number = 0, size: number = 5, successCallBack?: () => void, errorCallBack?: (errorMessage: string) => void): Promise<{ totalUsersCount: number; users: List_User[] }> {
+    const observable: Observable<{ totalUsersCount: number; users: List_User[] }> = this.httpClientService.get({
+      controller: "users",
+      queryString: `page=${page}&size=${size}`
+    });
+
+    const promiseData = firstValueFrom(observable);
+    promiseData.then(value => successCallBack())
+      .catch(error => errorCallBack(error));
+
+    return await promiseData;
   }
 }
