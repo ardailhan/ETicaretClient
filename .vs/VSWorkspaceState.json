@@ -3,13 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\admin\\components",
-    "\\src\\app\\admin\\components\\authorize-menu",
-    "\\src\\app\\dialogs",
-    "\\src\\app\\dialogs\\authorize-menu-dialog",
+    "\\src\\app\\admin",
+    "\\src\\app\\admin\\layout",
+    "\\src\\app\\admin\\layout\\components",
+    "\\src\\app\\admin\\layout\\components\\sidebar",
+    "\\src\\app\\services",
     "\\src\\app\\services\\common",
     "\\src\\app\\services\\common\\models"
   ],
-  "SelectedNode": "\\src\\app\\dialogs\\dialog.module.ts",
+  "SelectedNode": "\\src\\app\\admin\\components\\user\\user.component.html",
   "PreviewInSolutionExplorer": false
 }
