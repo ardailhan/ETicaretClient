@@ -3,14 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\admin",
-    "\\src\\app\\admin\\layout",
-    "\\src\\app\\admin\\layout\\components",
-    "\\src\\app\\admin\\layout\\components\\sidebar",
-    "\\src\\app\\services",
-    "\\src\\app\\services\\common",
-    "\\src\\app\\services\\common\\models"
+    "\\src\\app\\dialogs",
+    "\\src\\app\\dialogs\\shopping-complete-dialog"
   ],
-  "SelectedNode": "\\src\\app\\admin\\components\\user\\user.component.html",
+  "SelectedNode": "\\src\\app\\dialogs\\dialog.module.ts",
   "PreviewInSolutionExplorer": false
 }
