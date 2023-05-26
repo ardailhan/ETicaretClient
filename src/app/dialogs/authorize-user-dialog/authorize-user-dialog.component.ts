@@ -4,10 +4,8 @@ import { MatSelectionList } from '@angular/material/list';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { SpinnerType } from '../../base/base.component';
 import { List_Role } from '../../contracts/role/List_Role';
-import { AuthorizationEndpointService } from '../../services/common/models/authorization-endpoint.service';
 import { RoleService } from '../../services/common/models/role.service';
 import { UserService } from '../../services/common/models/user.service';
-import { AuthorizeMenuDialogComponent } from '../authorize-menu-dialog/authorize-menu-dialog.component';
 import { BaseDialog } from '../base/base-dialog';
 
 @Component({
@@ -15,21 +13,21 @@ import { BaseDialog } from '../base/base-dialog';
   templateUrl: './authorize-user-dialog.component.html',
   styleUrls: ['./authorize-user-dialog.component.scss']
 })
-export class AuthorizeUserDialogComponent extends BaseDialog<AuthorizeMenuDialogComponent> implements OnInit {
-  constructor(dialogRef: MatDialogRef<AuthorizeMenuDialogComponent>,
+export class AuthorizeUserDialogComponent extends BaseDialog<AuthorizeUserDialogComponent> implements OnInit {
+  constructor(dialogRef: MatDialogRef<AuthorizeUserDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private userService: UserService,
     private roleService: RoleService,
-    private authorizationEndpointService: AuthorizationEndpointService,
+    private userService: UserService,
     private spinner: NgxSpinnerService) {
     super(dialogRef)
   }
   roles: { datas: List_Role[], totalCount: number };
   assignedRoles: Array<string>;
   listRoles: { name: string, selected: boolean }[];
+
   async ngOnInit() {
-    this.spinner.show(SpinnerType.BallAtom);
-    this.assignedRoles = await this.userService.getRolesToUser(this.data, ()=> this.spinner.hide(SpinnerType.BallAtom));
+    this.spinner.show(SpinnerType.BallAtom)
+    this.assignedRoles = await this.userService.getRolesToUser(this.data, () => this.spinner.hide(SpinnerType.BallAtom));
 
     this.roles = await this.roleService.getRoles(-1, -1);
 

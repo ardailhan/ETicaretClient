@@ -8,7 +8,6 @@ import { AuthorizeMenuDialogComponent } from '../../../dialogs/authorize-menu-di
 import { DialogService } from '../../../services/common/dialog.service';
 import { ApplicationService } from '../../../services/common/models/application.service';
 
-
 interface FoodNode {
   name: string;
   children?: FoodNode[];
@@ -86,7 +85,7 @@ export class AuthorizeMenuComponent extends BaseComponent implements OnInit {
       componentType: AuthorizeMenuDialogComponent,
       data: { code: code, name: name, menuName: menuName },
       options: {
-        width: "750px",
+        width: "750px"
       },
       afterClosed: () => {
 
