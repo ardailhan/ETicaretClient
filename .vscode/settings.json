@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/93936c41-b316-4d8c-bbe0-e31df86cabf5/resourceGroups/ETicaretGroup/providers/Microsoft.Web/sites/ardaeticaret",
+    "appService.deploySubpath": "dist\\eticaret-client"
+}

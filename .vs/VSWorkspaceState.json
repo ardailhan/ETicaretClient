@@ -4,7 +4,8 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\dialogs",
-    "\\src\\app\\dialogs\\shopping-complete-dialog"
+    "\\src\\app\\dialogs\\order-detail-dialog",
+    "\\src\\app\\dialogs\\qrcode-reading-dialog"
   ],
   "PreviewInSolutionExplorer": false
 }

@@ -42,7 +42,7 @@ export class QrcodeReadingDialogComponent extends BaseDialog<QrcodeReadingDialog
 
       this.productService.updateStockQrCodeToProduct(jsonData.Id, parseInt(stockValue), () => {
         $("#btnClose").click();
-        this.toastrService.message(`${jsonData.Name} product stock data updated!`, "Stock Updated Successfully", {
+        this.toastrService.message(`${jsonData.Name} product stock data updated to ${stockValue}!`, "Stock Updated Successfully", {
           messageType: ToastrMessageType.Success,
           position: ToastrPosition.TopRight
         });
